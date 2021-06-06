@@ -1,22 +1,28 @@
-openapi: 2.0.0
+swagger: '2.0'
 info:
   title: api
-  version: "1.0"
-servers:
-  - url: "https://status.aws.amazon.com"
+  version: '1.0'
+host: status.aws.amazon.com
+schemes:
+  - https
+produces:
+  - application/json
+consumes:
+  - application/json
 paths:
   /data.json:
     get:
-      summary: ServiceStatus
+      summary: Your GET endpoint
       tags: []
       responses:
-        "200":
+        '200':
           description: OK
-          content:
-            application/json:
-              schema:
-                $ref: ../models/response/dataResponse.v1.yaml
+          schema:
+            $ref: ../models/response/dataResponse.v1.yaml
       operationId: get-data.json
-      description: ""
-components:
-  schemas: {}
+      parameters:
+        - in: body
+          name: body
+          schema:
+            $ref: ../models/request/dataRequest.v1.yaml
+definitions: {}
