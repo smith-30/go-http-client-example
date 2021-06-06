@@ -1,0 +1,6 @@
+title: DataRequest
+type: object
+properties:
+  id:
+    type: string
+description: ''

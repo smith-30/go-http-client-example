@@ -1,0 +1,18 @@
+title: Status
+type: object
+properties:
+  date:
+    type: integer
+  description:
+    type: string
+  details:
+    type: string
+  service:
+    type: string
+  service_name:
+    type: string
+  status:
+    type: integer
+  summary:
+    type: string
+description: ''

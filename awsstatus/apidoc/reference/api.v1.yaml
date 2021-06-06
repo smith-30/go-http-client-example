@@ -1,0 +1,22 @@
+openapi: 2.0.0
+info:
+  title: api
+  version: "1.0"
+servers:
+  - url: "https://status.aws.amazon.com"
+paths:
+  /data.json:
+    get:
+      summary: ServiceStatus
+      tags: []
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: ../models/response/dataResponse.v1.yaml
+      operationId: get-data.json
+      description: ""
+components:
+  schemas: {}

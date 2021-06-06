@@ -1,0 +1,12 @@
+title: DataResponse
+type: object
+description: ''
+properties:
+  archive:
+    type: array
+    items:
+      $ref: ../service_status.v1.yaml
+  current:
+    type: array
+    items:
+      $ref: ../service_status.v1.yaml
